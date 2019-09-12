@@ -1,0 +1,199 @@
+@import '../../assets/_mixins.scss';
+.fitness-week-activity{
+
+  //welcome message style start
+  .fitness-welcome-msg{
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    background: #fff;
+    display: inline-block;
+    width: 100%;
+
+    h5{
+      font-family: 'Helvetica Neue';
+      font-size: 34px;
+      letter-spacing: 0.48px;
+      line-height: 41px;
+      color: #00B6A3;
+      margin: 24px 0 10px 27px;
+      font-weight: 700;
+    }
+
+    .week-subtitle{
+      font-family: Helvetica Neue, serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #898694;
+      letter-spacing: 0.24px;
+      line-height: 19px;
+      margin-left: 27px;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+  }
+  //fitnes message style end
+
+  //fitness days style start
+  .fitness-days{
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+
+    .fitness-day-item{
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      display: inline-block;
+      -webkit-border-radius: 23px;
+      -moz-border-radius: 23px;
+      border-radius: 23px;
+      background: rgba(255, 255, 255, 0.25);
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0;
+      }
+
+      .fitness-date{
+        display: block;
+        margin: 11px 13px;
+        font-family: "Helvetica Neue, medium";
+      }
+
+      >span{
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.24px;
+      }
+    }
+  }
+  //fitness days style end
+
+  //fitness week time style start
+  .fitness-week-time{
+    @include fitnessHolder();
+
+    .fitness-week-average{
+      display: table;
+
+      .fitness-icon{
+        @include fitnessIcon();
+      }
+
+      > div{
+        display: table-cell;
+      }
+
+      .fitness-average-title{
+        padding-left: 15px;
+
+        .activity-label{
+          @include fitnessTitle();
+        }
+
+        .average-label{
+          @include fitnessLabel();
+        }
+      }
+    }
+
+    .fitness-spent-week-time{
+      @include fitnessWeekValue();
+    }
+  }
+  //fitness week time style end
+
+  //fitness steps style start
+  .fitness-steps{
+    @include fitnessHolder();
+    margin-top: 15px;
+    padding: 24px 30px 24px 20px;
+
+    > div{
+      display: table-cell;
+    }
+
+    .fitness-average-title{
+      display: table-cell;
+      padding-left: 15px;
+
+      .steps-label{
+        @include fitnessTitle();
+      }
+
+      .total-label{
+        @include fitnessLabel();
+      }
+    }
+
+    .fitness-steps-walked{
+      @include fitnessWeekValue();
+      vertical-align: middle;
+      width: 90%;
+      text-align: right;
+    }
+
+    .fitness-week-steps{
+
+      .fitness-step-icon{
+        @include fitnessIcon();
+        display: table-cell;
+
+        .mat-icon{
+          width: 41px;
+          height: 41px;
+          line-height: 41px;
+        }
+      }
+    }
+  }
+  //fitneess steps style end
+
+  //fitness calories style start
+  .fitness-calories{
+    @include fitnessHolder();
+    margin-top: 15px;
+    padding: 24px 30px 24px 20px;
+
+    > div{
+      display: table-cell;
+    }
+
+    .fitness-average-title{
+      display: table-cell;
+      padding-left: 15px;
+
+      .calories-label{
+        @include fitnessTitle();
+      }
+
+      .total-label{
+        @include fitnessLabel();
+      }
+    }
+
+    .fitness-calories-burned{
+      @include fitnessWeekValue();
+      vertical-align: middle;
+      width: 46%;
+      text-align: right;
+    }
+
+    .fitness-week-calories{
+
+      .fitness-calories-icon{
+        @include fitnessIcon();
+        display: table-cell;
+
+        .mat-icon{
+          width: 41px;
+          height: 41px;
+          line-height: 41px;
+        }
+      }
+    }
+  }
+  //fitness calories style end
+
+}

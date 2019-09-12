@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Helvetica Neue Light'), local('HelveticaNeue-Light'), url(assets/HelveticaNeue/Helvetica-Neue-Light) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue-Light) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue-Light) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/HelveticaNeue/Helvetica-Neue);
+  src: local('Helvetica Neue'), local('HelveticaNeue'), url(assets/HelveticaNeue/Helvetica-Neue?#iefix) format('embedded-opentype'), url(assets/HelveticaNeue/Helvetica-Neue) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue) format('woff2'), url(assets/HelveticaNeue/Helvetica-Neue.svg#HelveticaNeue) format('svg');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold'), url(assets/HelveticaNeue/Helvetica-Neue-Bold) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue-Bold) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue-Bold) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Helvetica Neue Light Italic'), local('HelveticaNeue-LightItalic'), url(assets/HelveticaNeue/Helvetica-Neue-Light-Italic) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue-Light-Italic) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue-Light-Italic) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Helvetica Neue Italic'), local('HelveticaNeue-Italic'), url(assets/HelveticaNeue/Helvetica-Neue-Italic) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue-Italic) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue-Italic) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Helvetica Neue Bold Italic'), local('HelveticaNeue-BoldItalic'), url(assets/HelveticaNeue/Helvetica-Neue-Bold-Italic) format('woff'), url(assets/HelveticaNeue/Helvetica-Neue-Bold-Italic) format('truetype'), url(assets/HelveticaNeue/Helvetica-Neue-Bold-Italic) format('woff2');
+}
+
