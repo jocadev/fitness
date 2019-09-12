@@ -1,0 +1,48 @@
+@mixin fitnessHolder() {
+  background: rgba(255, 255, 255, 0.25);
+  margin-top: 30px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  padding: 25px 20px 46px;
+}
+
+@mixin fitnessWeekValue() {
+  color: #fff;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 0.91px;
+  text-align: center;
+  margin-top: 25px;
+  font-family: 'Helvetica Neue';
+}
+
+@mixin fitnessTitle() {
+  display: block;
+  font-size: 20px;
+  font-family: "Helvetica Neue, medium";
+  line-height: 25px;
+  letter-spacing: 0.48px;
+  color: #fff;
+}
+
+@mixin fitnessLabel() {
+  display: block;
+  font-size: 16px;
+  font-family: "Helvetica Neue, medium";
+  line-height: 19px;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@mixin fitnessIcon() {
+  vertical-align: middle;
+  width: 41px;
+  height: 41px;
+  text-align: center;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+}
