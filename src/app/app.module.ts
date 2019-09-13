@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { WeekActivityComponent } from './week-activity/week-activity.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import { WeekActivityComponent } from './week-activity/week-activity.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -50,8 +50,13 @@
       border-radius: 23px;
       background: rgba(255, 255, 255, 0.25);
       margin-right: 10px;
+      @include backgroundTransition();
       &:last-child{
         margin-right: 0;
+      }
+      &:hover{
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.45);
       }
 
       .fitness-date{
@@ -130,7 +135,7 @@
     .fitness-steps-walked{
       @include fitnessWeekValue();
       vertical-align: middle;
-      width: 90%;
+      width: 99%;
       text-align: right;
     }
 
@@ -166,6 +171,7 @@
 
       .calories-label{
         @include fitnessTitle();
+        padding-right: 20px;
       }
 
       .total-label{
@@ -176,7 +182,7 @@
     .fitness-calories-burned{
       @include fitnessWeekValue();
       vertical-align: middle;
-      width: 46%;
+      width: 99%;
       text-align: right;
     }
 
