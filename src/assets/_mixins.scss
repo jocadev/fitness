@@ -7,6 +7,34 @@
   padding: 25px 20px 46px;
 }
 
+@mixin fitnessMessageHolder() {
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  display: inline-block;
+  width: 100%;
+}
+
+@mixin fitnessMessageTitle(){
+  font-family: 'Helvetica Neue';
+  font-size: 34px;
+  letter-spacing: 0.48px;
+  line-height: 41px;
+  margin: 24px 0 10px 27px;
+  font-weight: 700;
+}
+
+@mixin fitnessMessageSubtitle(){
+  font-family: "Helvetica Neue, medium";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.24px;
+  line-height: 19px;
+  margin-left: 27px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
 @mixin fitnessWeekValue() {
   color: #fff;
   font-size: 38px;
@@ -44,7 +72,7 @@
   -moz-border-radius: 3em;
   border-radius: 3em;
   color: #fff;
-  background: rgba(255, 255, 255, 0.25);
+
 }
 
 @mixin backgroundTransition() {
@@ -53,4 +81,31 @@
   -ms-transition: background 0.5s;
   -o-transition: background 0.5s;
   transition: background 0.5s;
+}
+
+@mixin fitnessDay() {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  background: rgba(255, 255, 255, 0.25);
+  margin-right: 10px;
+  @include backgroundTransition();
+}
+
+@mixin fitnessDate(){
+  display: block;
+  margin: 11px 13px;
+  font-family: "Helvetica Neue, medium";
+}
+
+@mixin fitnessDayImageLabel{
+  color: #151C1F;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  line-height: 23px;
+  font-family: "Helvetica Neue, regular";
 }
