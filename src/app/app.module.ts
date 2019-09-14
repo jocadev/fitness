@@ -9,7 +9,6 @@ import { WeekActivityComponent } from './week-activity/week-activity.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DayActivityComponent } from './day-activity/day-activity.component';
-
 @NgModule({
   declarations: [
     AppComponent,
