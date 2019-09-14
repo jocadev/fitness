@@ -4,25 +4,25 @@
       <!--welcome message-->
       <div class="fitness-day-msg">
         <mat-icon>keyboard_arrow_left</mat-icon>
-        <h5 class="day-title">Tuesday</h5>
-        <span class="day-subtitle">June 21, 2019.</span>
+        <h5 class="day-title">{{currentDay}}</h5>
+        <span class="day-subtitle">June {{currentDate}}, 2019.</span>
       </div>
 
       <!--days section-->
       <div class="fitness-days">
-        <div class="fitness-day-item">
+        <div class="fitness-day-item" (click)="getDayData(10, 'Monday')">
           <span class="fitness-date">4 MON</span>
         </div>
-        <div class="fitness-day-item">
+        <div class="fitness-day-item" (click)="getDayData(11, 'Tuesday')">
           <span class="fitness-date">5 TUE</span>
         </div>
-        <div class="fitness-day-item">
+        <div class="fitness-day-item" (click)="getDayData(12, 'Wednesday')">
           <span class="fitness-date">6 WED</span>
         </div>
-        <div class="fitness-day-item">
+        <div class="fitness-day-item" (click)="getDayData(13, 'Thursday')">
           <span class="fitness-date">7 THU</span>
         </div>
-        <div class="fitness-day-item">
+        <div class="fitness-day-item" (click)="getDayData(14, 'Friday')">
           <span class="fitness-date">8 FRI</span>
         </div>
 
@@ -35,7 +35,7 @@
             <mat-icon>directions_run</mat-icon>
           </div>
           <span class="fitness-steps-label">Steps</span>
-          <span class="fitness-steps">7542</span>
+          <span class="fitness-steps">{{stepsPerDay}}</span>
         </div>
         <div class="fitness-moral-msg">
           <span class="fitness-mark">Very good</span>
@@ -44,18 +44,19 @@
         <div class="fitness-data">
           <div class="fitness-data-item">
             <span class="info-label">km</span>
-            <span class="info-data">1</span>
+            <span class="info-data">{{kmPerDay}}</span>
           </div>
           <div class="fitness-data-item">
             <span class="info-label">cal</span>
-            <span class="info-data">2</span>
+            <span class="info-data">{{calPerDay}}</span>
           </div>
           <div class="fitness-data-item">
             <span class="info-label">hours</span>
-            <span class="info-data">3</span>
+            <span class="info-data">{{hPerDay}}</span>
           </div>
         </div>
       </div>
+
 
     </div>
   </div>

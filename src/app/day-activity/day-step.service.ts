@@ -1,23 +1,23 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FitnessActivityModel } from '../fitness-activity.model';
+import { FitnessStepsService } from '../week-activity/fitness-steps.service';
+import {FitnessActivityModel} from '../fitness-activity.model';
 
 @Injectable()
-export class FitnessStepsService {
-   apiURL = 'https://api.myjson.com/bins/1gwnal';
-   stepsChanged = new EventEmitter();
-   private fitnessSteps: FitnessActivityModel[] = [];
-   dayStep = 0;
-   constructor(private httpClient: HttpClient) {
-   }
-   private stepsWalked = 0;
+export class DayStepService {apiURL = 'https://api.myjson.com/bins/1gwnal';
+  stepsChanged = new EventEmitter();
+  private fitnessSteps: FitnessActivityModel[] = [];
+  dayStep = 0;
+  constructor(private httpClient: HttpClient) {
+  }
+  private stepsWalked = 0;
   getActivityData(x) {
+
     let promise = new Promise((resolve, reject) => {
       this.httpClient.get(this.apiURL)
         .toPromise()
         .then(
           response => { // Success
-            this.calculateSteps(response);
             this.getDayData(response, x);
             resolve();
           }
@@ -28,15 +28,7 @@ export class FitnessStepsService {
     });
     return promise;
   }
-  private calculateSteps(data) {
-    for (const responseKey of data) {
-      this.fitnessSteps.push(new FitnessActivityModel(responseKey.timestamp, responseKey.steps));
-      this.stepsWalked += responseKey.steps;
-    }
-    this.stepsChanged.emit(this.stepsWalked);
-  }
-
-   getDayData(data, x) {
+  getDayData(data, x) {
     let date;
     let day;
     let steps = 0;
@@ -48,7 +40,7 @@ export class FitnessStepsService {
       }
       this.dayStep = steps;
     }
-    // this.stepsChanged.emit(steps);
+    this.stepsChanged.emit(steps);
   }
 
 }
