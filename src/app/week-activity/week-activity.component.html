@@ -1,69 +1,73 @@
-<div class="fitness-week-activity">
-  <!--welcome message-->
-  <div class="fitness-welcome-msg">
-    <h5 class="week-title">Welcome!</h5>
-    <span class="week-subtitle">Overview of your activity</span>
-  </div>
+<div class="fitness-holder">
+  <div class="fitness-inner">
+    <div class="fitness-week-activity">
+      <!--welcome message-->
+      <div class="fitness-welcome-msg">
+        <h5 class="week-title">Welcome!</h5>
+        <span class="week-subtitle">Overview of your activity</span>
+      </div>
 
-  <!--days section-->
-  <div class="fitness-days">
-    <div class="fitness-day-item">
-      <span class="fitness-date">4 MON</span>
-    </div>
-    <div class="fitness-day-item">
-      <span class="fitness-date">5 TUE</span>
-    </div>
-    <div class="fitness-day-item">
-      <span class="fitness-date">6 WED</span>
-    </div>
-    <div class="fitness-day-item">
-      <span class="fitness-date">7 THU</span>
-    </div>
-    <div class="fitness-day-item">
-      <span class="fitness-date">8 FRI</span>
-    </div>
+      <!--days section-->
+      <div class="fitness-days">
+        <div class="fitness-day-item">
+          <span class="fitness-date">4 MON</span>
+        </div>
+        <div class="fitness-day-item">
+          <span class="fitness-date">5 TUE</span>
+        </div>
+        <div class="fitness-day-item">
+          <span class="fitness-date">6 WED</span>
+        </div>
+        <div class="fitness-day-item">
+          <span class="fitness-date">7 THU</span>
+        </div>
+        <div class="fitness-day-item">
+          <span class="fitness-date">8 FRI</span>
+        </div>
 
-  </div>
-
-  <!--time section-->
-  <div class="fitness-week-time">
-    <div class="fitness-week-average">
-      <div class="fitness-icon">
-        <mat-icon>alarm</mat-icon>
       </div>
-      <div class="fitness-average-title">
-        <span class="activity-label">Activity</span>
-        <span class="average-label">Average</span>
+
+      <!--time section-->
+      <div class="fitness-week-time">
+        <div class="fitness-week-average">
+          <div class="fitness-icon">
+            <mat-icon>alarm</mat-icon>
+          </div>
+          <div class="fitness-average-title">
+            <span class="activity-label">Activity</span>
+            <span class="average-label">Average</span>
+          </div>
+        </div>
+        <div class="fitness-spent-week-time">{{time}}</div>
+      </div>
+
+      <!--steps section-->
+      <div class="fitness-steps">
+        <div class="fitness-week-steps">
+          <div class="fitness-step-icon">
+            <mat-icon>directions_run</mat-icon>
+          </div>
+          <div class="fitness-average-title">
+            <span class="steps-label">Steps</span>
+            <span class="total-label">Total</span>
+          </div>
+        </div>
+        <div class="fitness-steps-walked">{{steps}}</div>
+      </div>
+
+      <!--calories section-->
+      <div class="fitness-calories">
+        <div class="fitness-week-calories">
+          <div class="fitness-calories-icon">
+            <mat-icon>whatshot</mat-icon>
+          </div>
+          <div class="fitness-average-title">
+            <span class="calories-label">Calories</span>
+            <span class="total-label">Total Burned</span>
+          </div>
+        </div>
+        <div class="fitness-calories-burned">{{calories}}</div>
       </div>
     </div>
-    <div class="fitness-spent-week-time">{{time}}</div>
-  </div>
-
-  <!--steps section-->
-  <div class="fitness-steps">
-    <div class="fitness-week-steps">
-      <div class="fitness-step-icon">
-        <mat-icon>directions_run</mat-icon>
-      </div>
-      <div class="fitness-average-title">
-        <span class="steps-label">Steps</span>
-        <span class="total-label">Total</span>
-      </div>
-    </div>
-    <div class="fitness-steps-walked">{{steps}}</div>
-  </div>
-
-  <!--calories section-->
-  <div class="fitness-calories">
-    <div class="fitness-week-calories">
-      <div class="fitness-calories-icon">
-        <mat-icon>whatshot</mat-icon>
-      </div>
-      <div class="fitness-average-title">
-        <span class="calories-label">Calories</span>
-        <span class="total-label">Total Burned</span>
-      </div>
-    </div>
-    <div class="fitness-calories-burned">{{calories}}</div>
   </div>
 </div>

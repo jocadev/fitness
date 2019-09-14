@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { WeekActivityComponent } from './week-activity/week-activity.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DayActivityComponent } from './day-activity/day-activity.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeekActivityComponent
+    WeekActivityComponent,
+    DayActivityComponent
   ],
   imports: [
     BrowserModule,
