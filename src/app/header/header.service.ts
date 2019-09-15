@@ -1,13 +1,17 @@
-import { DayStepService } from '../day-activity/day-step.service';
 import {Injectable} from '@angular/core';
+import {FitnessStepsService} from '../week-activity/fitness-steps.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeaderService {
-  constructor(private dayStepService: DayStepService) {
+  constructor(private dayStepService: FitnessStepsService) {
   }
    getCurrentDayData(day, dayName) {
      this.dayStepService.getActivityData(day);
+  }
+
+  getCurrentData() {
+    this.dayStepService.getActivityData('');
   }
 }

@@ -37,5 +37,6 @@ export class HeaderComponent implements OnInit {
     this.loadedFeature = 'welcome';
     this.onSelect('week');
     this.selectedItemId = 1;
+    this.headerService.getCurrentData();
   }
 }

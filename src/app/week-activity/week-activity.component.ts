@@ -15,7 +15,7 @@ export class WeekActivityComponent implements OnInit {
   constructor( private fitnessStepService: FitnessStepsService) {}
 
   ngOnInit() {
-    this.fitnessStepService.getActivityData(11);
+    this.fitnessStepService.getActivityData(0);
     this.setData();
   }
 
