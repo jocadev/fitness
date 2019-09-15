@@ -1,16 +1,12 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FitnessStepsService } from '../week-activity/fitness-steps.service';
-import {FitnessActivityModel} from '../fitness-activity.model';
 
-@Injectable()
+@Injectable(  {providedIn: 'root'})
 export class DayStepService {apiURL = 'https://api.myjson.com/bins/1gwnal';
   stepsChanged = new EventEmitter();
-  private fitnessSteps: FitnessActivityModel[] = [];
   dayStep = 0;
   constructor(private httpClient: HttpClient) {
   }
-  private stepsWalked = 0;
   getActivityData(x) {
 
     let promise = new Promise((resolve, reject) => {

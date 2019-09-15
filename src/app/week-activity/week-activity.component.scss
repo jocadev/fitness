@@ -4,25 +4,8 @@
   padding: 20px 17px 155px 18px;
 }
 
-
 .fitness-week-activity{
-
-  //welcome message style start
-  .fitness-welcome-msg{
-    @include fitnessMessageHolder();
-    background: #fff;
-
-    h5{
-      @include fitnessMessageTitle();
-      color: #00B6A3;
-    }
-
-    .week-subtitle{
-      @include fitnessMessageSubtitle();
-      color: #898694;
-    }
-  }
-  //fitnes message style end
+  padding-bottom: 155px;
 
   //fitness days style start
   .fitness-days{
@@ -125,6 +108,7 @@
         @include fitnessIcon();
         display: table-cell;
         background: rgba(255, 255, 255, 0.25);
+
         .mat-icon{
           width: 41px;
           height: 41px;
