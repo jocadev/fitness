@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { FitnessActivityModel } from '../fitness-activity.model';
-import {FitnessStepsService} from './fitness-steps.service';
+import { FitnessStepsService } from './fitness-steps.service';
 
 @Component({
   selector: 'app-week-activity',

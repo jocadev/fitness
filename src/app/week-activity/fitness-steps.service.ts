@@ -2,7 +2,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FitnessActivityModel } from '../fitness-activity.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FitnessStepsService {
    apiURL = 'https://api.myjson.com/bins/1gwnal';
    stepsChanged = new EventEmitter();

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FitnessStepsService} from '../week-activity/fitness-steps.service';
 import { DayStepService } from './day-step.service';
 
 @Component({
   selector: 'app-day-activity',
   templateUrl: './day-activity.component.html',
-  styleUrls: ['./day-activity.component.scss'],
-  providers: [FitnessStepsService, DayStepService]
+  styleUrls: ['./day-activity.component.scss']
 })
 export class DayActivityComponent implements OnInit {
   private currentDay;
@@ -15,10 +13,10 @@ export class DayActivityComponent implements OnInit {
   private kmPerDay;
   private calPerDay;
   private hPerDay;
-  constructor(private fitnessStepService: FitnessStepsService, private stepSer: DayStepService) { }
+  constructor(private stepSer: DayStepService) {
+  }
 
   ngOnInit() {
-    this.stepSer.getActivityData(14);
     this.setData();
   }
   private getDayData(day, dayName) {
@@ -26,7 +24,6 @@ export class DayActivityComponent implements OnInit {
     this.currentDay = dayName;
     this.currentDate = day;
   }
-
   private calculateData(steps) {
     this.stepsPerDay = steps;
     this.kmPerDay = Math.round((steps * 0.762) / 1000).toFixed(1);
@@ -38,8 +35,8 @@ export class DayActivityComponent implements OnInit {
       .subscribe(
         (steps) => {
           this.calculateData(steps);
-        }
-      );
+      }
+    );
   }
 }
 

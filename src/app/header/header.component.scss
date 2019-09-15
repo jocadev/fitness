@@ -1,0 +1,87 @@
+@import '../../assets/_mixins.scss';
+//welcome message style start
+.fitness-holder{
+  padding: 20px 17px 0 18px;
+  background-image: linear-gradient(180deg, #34C7A0, #008AA2);
+}
+
+.fitness-welcome-msg{
+  @include fitnessMessageHolder();
+  background: #fff;
+
+  h5{
+    @include fitnessMessageTitle();
+    color: #00B6A3;
+  }
+
+  .week-subtitle{
+    @include fitnessMessageSubtitle();
+    color: #898694;
+  }
+}
+//fitnes message style end
+
+.fitness-day-msg{
+  @include fitnessMessageHolder();
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+
+  mat-icon{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    transform: translateY(-50%);
+    color: #fff;
+    line-height: 40px;
+    left: 10px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  h5{
+    @include fitnessMessageTitle();
+    color: #fff;
+    margin-left: 60px;
+  }
+
+  .day-subtitle{
+    @include fitnessMessageSubtitle();
+    color: rgba(255, 255, 255, 0.70);
+    margin-left: 60px
+  }
+}
+//fitnes message style end
+
+//fitness days style start
+.fitness-days{
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+
+  .fitness-day-item{
+    @include fitnessDay();
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .fitness-date{
+      @include fitnessDate();
+    }
+
+    >span{
+      color: rgba(255, 255, 255, 0.70);
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.24px;
+    }
+  }
+}
+

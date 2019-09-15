@@ -1,0 +1,29 @@
+<!--welcome message-->
+<div class="fitness-welcome-msg" *ngIf="loadedFeature === 'welcome'">
+  <h5 class="week-title">Welcome!</h5>
+  <span class="week-subtitle">Overview of your activity</span>
+</div>
+<div class="fitness-day-msg" *ngIf="loadedFeature === 'day'">
+  <mat-icon (click)="backToWelcome()">keyboard_arrow_left</mat-icon>
+  <h5 class="day-title">{{currentDay}}</h5>
+  <span class="day-subtitle">June {{currentDate}}, 2019.</span>
+</div>
+
+<!--navigation - days-->
+<div class="fitness-days">
+  <div class="fitness-day-item" (click)="getDayData(10, 'Monday')">
+    <span class="fitness-date">10 MON</span>
+  </div>
+  <div class="fitness-day-item" (click)="getDayData(11, 'Tuesday')">
+    <span class="fitness-date">11 TUE</span>
+  </div>
+  <div class="fitness-day-item" (click)="getDayData(12, 'Wednesday')">
+    <span class="fitness-date">12 WED</span>
+  </div>
+  <div class="fitness-day-item" (click)="getDayData(13, 'Thursday')">
+    <span class="fitness-date">13 THU</span>
+  </div>
+  <div class="fitness-day-item" (click)="getDayData(14, 'Friday')">
+    <span class="fitness-date">14 FRI</span>
+  </div>
+</div>

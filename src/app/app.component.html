@@ -1,3 +1,7 @@
-<!--<app-week-activity></app-week-activity>-->
-<app-day-activity></app-day-activity>
-
+<div class="fitness-holder">
+  <div class="fitness-inner">
+    <app-header (featureSelected)="onNavigate($event)"></app-header>
+    <app-week-activity *ngIf="loadedFeature === 'week'"></app-week-activity>
+    <app-day-activity *ngIf="loadedFeature !== 'week'"></app-day-activity>
+  </div>
+</div>
