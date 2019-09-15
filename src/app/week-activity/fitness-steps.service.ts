@@ -13,14 +13,17 @@ export class FitnessStepsService {
    constructor(private httpClient: HttpClient) {
    }
    private stepsWalked = 0;
-  getActivityData(x) {
+  getActivityData(activeDay) {
     let promise = new Promise((resolve, reject) => {
       this.httpClient.get(this.apiURL)
         .toPromise()
         .then(
           response => { // Success
-            this.calculateSteps(response);
-            this.getDayData(response, x);
+            if (activeDay === 0) {
+              this.calculateSteps(response);
+            } else {
+              this.getDayData(response, activeDay);
+            }
             resolve();
           }
         )
@@ -38,19 +41,19 @@ export class FitnessStepsService {
     this.stepsChanged.emit(this.stepsWalked);
   }
 
-   getDayData(data, x) {
+   getDayData(data, activeDay) {
     let date;
     let day;
     let steps = 0;
     for (const responseKey of data) {
       date = new Date(responseKey.timestamp);
       day = date.getDate();
-      if (day === x ) {
+      if (day === activeDay ) {
         steps += responseKey.steps;
       }
       this.dayStep = steps;
     }
-    // this.stepsChanged.emit(steps);
+    this.stepsChanged.emit(steps);
   }
 
 }

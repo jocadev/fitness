@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DayStepService } from './day-step.service';
+import { FitnessStepsService } from '../week-activity/fitness-steps.service';
 
 @Component({
   selector: 'app-day-activity',
@@ -13,7 +13,7 @@ export class DayActivityComponent implements OnInit {
   private kmPerDay;
   private calPerDay;
   private hPerDay;
-  constructor(private stepSer: DayStepService) {
+  constructor(private stepSer: FitnessStepsService) {
   }
 
   ngOnInit() {
