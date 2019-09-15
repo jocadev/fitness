@@ -11,19 +11,19 @@
 
 <!--navigation - days-->
 <div class="fitness-days">
-  <div class="fitness-day-item" (click)="getDayData(10, 'Monday')">
+  <div class="fitness-day-item" [ngClass]="{'active': selectedItemId === 10}" (click)="getDayData(10, 'Monday', $event)">
     <span class="fitness-date">10 MON</span>
   </div>
-  <div class="fitness-day-item" (click)="getDayData(11, 'Tuesday')">
+  <div class="fitness-day-item"  [ngClass]="{'active': selectedItemId === 11}" (click)="getDayData(11, 'Tuesday', $event)">
     <span class="fitness-date">11 TUE</span>
   </div>
-  <div class="fitness-day-item" (click)="getDayData(12, 'Wednesday')">
+  <div class="fitness-day-item" [ngClass]="{'active': selectedItemId === 12}" (click)="getDayData(12, 'Wednesday', $event)">
     <span class="fitness-date">12 WED</span>
   </div>
-  <div class="fitness-day-item" (click)="getDayData(13, 'Thursday')">
+  <div class="fitness-day-item" [ngClass]="{'active': selectedItemId === 13}" (click)="getDayData(13, 'Thursday', $event)">
     <span class="fitness-date">13 THU</span>
   </div>
-  <div class="fitness-day-item" (click)="getDayData(14, 'Friday')">
+  <div class="fitness-day-item" [ngClass]="{'active': selectedItemId === 14}" (click)="getDayData(14, 'Friday', $event)">
     <span class="fitness-date">14 FRI</span>
   </div>
 </div>

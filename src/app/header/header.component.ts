@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public currentDay;
   public loadedFeature = 'welcome';
   @Output() featureSelected = new EventEmitter<string>();
-
+  selectedItemId: number;
   constructor( private headerService: HeaderService ) { }
 
   onSelect(feature: string) {
@@ -21,11 +21,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDayData(day, dayName) {
+  getDayData(day, dayName, event) {
       this.headerService.getCurrentDayData(day, dayName);
       this.setDayData(day, dayName);
       this.loadedFeature = 'day';
       this.onSelect('day');
+      this.selectedItemId = day;
   }
 
   setDayData(day, dayName) {
@@ -35,5 +36,6 @@ export class HeaderComponent implements OnInit {
   backToWelcome() {
     this.loadedFeature = 'welcome';
     this.onSelect('week');
+    this.selectedItemId = 1;
   }
 }
